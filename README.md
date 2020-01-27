@@ -42,3 +42,30 @@
 
 # Credits
 Original code from https://github.com/satackey/action-google-drive
+Forked from https://github.com/mkrakowitzer/actions-googledrive
+
+# Create docker image
+
+Refreshing image:
+
+```sh
+ docker build -t google-drive-action .
+```
+
+Docker login to GitHub:
+
+```sh
+echo TOKEN | docker login -u USERNAME --password-stdin docker.pkg.github.com
+```
+
+Tag the image:
+
+```sh
+docker tag IMAGE_ID docker.pkg.github.com/addresscloud/google-drive-action/google-drive-action:VERSION
+```
+
+Publish to GitHub:
+
+```
+docker push docker.pkg.github.com/addresscloud/google-drive-action/google-drive-action:VERSION
+```
