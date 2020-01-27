@@ -1,4 +1,16 @@
-# A github action for uploading files to google drive
+# google-drive-action
+
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
+> An action to upload to Google Drive
+
+## Table of Contents
+
+- [Inputs](#inputs)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Inputs
 
@@ -28,23 +40,25 @@
 `description` Your Google Drive API client secret
 `required` true
 
-## Example usage
+## Usage
 
 ```
-- uses: mkrakowitzer/actions-googledrive@master
+- uses: addresscloud/google-drive-action@v1.0.0
   with:
-    upload-from: ./tmp
-    upload-to: IRL-L2-Support/platform-architecture-docs
+    upload-from: ./My-file.pdf
+    upload-to: /
     skicka-tokencache-json: ${{ secrets.FOO }}
     google-client-id: ${{ secrets.BAR }}
     google-client-secret: ${{ secrets.BAZ }}
 ```
 
-# Credits
-Original code from https://github.com/satackey/action-google-drive
-Forked from https://github.com/mkrakowitzer/actions-googledrive
+## Maintainers
 
-# Create docker image
+[@talltom](https://github.com/talltom)
+
+## Contributing
+
+### Create docker image
 
 Refreshing image:
 
@@ -69,3 +83,9 @@ Publish to GitHub:
 ```
 docker push docker.pkg.github.com/addresscloud/google-drive-action/google-drive-action:VERSION
 ```
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+apl-2.0 © 2020 Merritt Krakowitzer
